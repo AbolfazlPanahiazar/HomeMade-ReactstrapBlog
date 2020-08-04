@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button } from "reactstrap";
+import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle } from "reactstrap";
 
 function PostSingle() {
   const { postId } = useParams({});
