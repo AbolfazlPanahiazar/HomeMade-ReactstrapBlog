@@ -8,7 +8,6 @@ function SideBar() {
     fetch("https://jsonplaceholder.ir/photos")
       .then((response) => response.json())
       .then((response) => {
-        console.log(response);
         setPhotos(response.filter((item, index) => index < 3));
       });
   }, []);
@@ -16,7 +15,7 @@ function SideBar() {
   return (
     <aside>
       {photos.map((photo) => (
-        <Card key={photo.id} className="my-2">
+        <Card key={photo.id} className="my-2 bg-dark text-light">
           <CardImg top width="100%" src={`https://picsum.photos/id/${photo.id * 53}/600/300`} alt="Card image cap" />
           <CardBody className="text-center">
             <CardTitle>{photo.title}</CardTitle>
