@@ -13,14 +13,14 @@ function App() {
     <Container bg="primary">
       <Header />
       <Row className="d-flex">
-        <Col xs="12" md="8">
+        <Col xs={12} md={8}>
           <Switch>
             {routes.map((route) => (
               <Route {...route} />
             ))}
           </Switch>
         </Col>
-        <Col xs="12" md="4">
+        <Col xs={12} md={4}>
           <SideBar />
         </Col>
       </Row>
