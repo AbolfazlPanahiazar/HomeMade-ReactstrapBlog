@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle } from "reactstrap";
 
 function PostSingle() {
@@ -36,14 +36,16 @@ function PostSingle() {
         </CardBody>
       </Card>
       <Card className="mt-1 bg-dark text-light">
-        <div dir="rtl" className="d-flex justify-content-between">
-          <img src={auther.avatar} alt="auther" />
-          <div className="d-flex flex-column mx-2 text-center justify-content-center">
-            <span>{auther.name}</span>
-            <span>{auther.email}</span>
-            <span>{auther.phone}</span>
+        <Link className="text-light" to={`/blog/user/${auther.id}`}>
+          <div dir="rtl" className="d-flex justify-content-between">
+            <img src={auther.avatar} alt="auther" />
+            <div className="d-flex flex-column mx-2 text-center justify-content-center">
+              <span>{auther.name}</span>
+              <span>{auther.email}</span>
+              <span>{auther.phone}</span>
+            </div>
           </div>
-        </div>
+        </Link>
       </Card>
     </div>
   );
